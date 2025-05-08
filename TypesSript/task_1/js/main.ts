@@ -1,8 +1,8 @@
 // Teacher Interface
 
 export interface Teacher {
-    readonly firstName: string;
-    readonly lastName: string;
+    firstName: string;
+    lastName: string;
     fullTimeEmployee: boolean;
     yearsOfExperience?: number; // this means optional property
     location: string;
