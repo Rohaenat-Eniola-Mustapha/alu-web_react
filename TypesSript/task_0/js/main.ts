@@ -63,17 +63,17 @@ function renderStudentTable(students: Student[]): void {
   // Append the table to the document body
   document.body.appendChild(table);
 
-  // // Basic CSS for the table
-  // table.style.borderCollapse = "collapse";
-  // table.style.width = "100%";
-  // table.style.maxWidth = "400px"; // Adjust max width
-  // table.style.margin = "20px auto";
-  // table.style.border = "1px solid #ddd";
-  // const thTdStyle = "border: 1px solid #ddd; padding: 8px; text-align: left;";
-  // const ths = table.querySelectorAll("th");
-  // ths.forEach(th => th.style.cssText = thTdStyle + "background-color: #f2f2f2;");
-  // const tds = table.querySelectorAll("td");
-  // tds.forEach(td => td.style.cssText = thTdStyle);
+  // Basic CSS for the table
+  table.style.borderCollapse = "collapse";
+  table.style.width = "100%";
+  table.style.maxWidth = "400px"; // Adjust max width
+  table.style.margin = "20px auto";
+  table.style.border = "1px solid #ddd";
+  const thTdStyle = "border: 1px solid #ddd; padding: 8px; text-align: left;";
+  const ths = table.querySelectorAll("th");
+  ths.forEach(th => th.style.cssText = thTdStyle + "background-color: #f2f2f2;");
+  const tds = table.querySelectorAll("td");
+  tds.forEach(td => td.style.cssText = thTdStyle);
 }
 
 // Call the function to render the table when the DOM is loaded
