@@ -1,12 +1,20 @@
 "use strict";
 // Teacher Interface
 Object.defineProperty(exports, "__esModule", { value: true });
-// Example usage
-var teacher3 = {
+var director1 = {
     firstName: 'John',
-    fullTimeEmployee: false,
     lastName: 'Doe',
     location: 'London',
-    contract: false,
+    fullTimeEmployee: true,
+    numberOfReports: 17,
 };
-console.log(teacher3);
+console.log(director1);
+// // Example usage
+// const teacher3: Teacher = {
+//     firstName: 'John',
+//     fullTimeEmployee: false,
+//     lastName: 'Doe',
+//     location: 'London',
+//     contract: false,
+// };
+// console.log(teacher3);

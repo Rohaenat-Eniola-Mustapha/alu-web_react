@@ -9,13 +9,26 @@ export interface Teacher {
     [propName: string]: any;
 }
 
-// Example usage
-const teacher3: Teacher = {
+export interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
+const director1: Directors = {
     firstName: 'John',
-    fullTimeEmployee: false,
     lastName: 'Doe',
     location: 'London',
-    contract: false,
+    fullTimeEmployee: true,
+    numberOfReports: 17,
 };
+console.log(director1);
 
-console.log(teacher3);
+// // Example usage
+// const teacher3: Teacher = {
+//     firstName: 'John',
+//     fullTimeEmployee: false,
+//     lastName: 'Doe',
+//     location: 'London',
+//     contract: false,
+// };
+
+// console.log(teacher3);
