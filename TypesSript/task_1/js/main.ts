@@ -1,6 +1,6 @@
 // Teacher Interface
 
-interface Teacher {
+export interface Teacher {
     readonly firstName: string;
     readonly lastName: string;
     fullTimeEmployee: boolean;
@@ -18,4 +18,4 @@ const teacher3: Teacher = {
     contract: false,
 };
 
-  console.log(teacher3);
+console.log(teacher3);

@@ -1,4 +1,6 @@
+"use strict";
 // Teacher Interface
+Object.defineProperty(exports, "__esModule", { value: true });
 // Example usage
 var teacher3 = {
     firstName: 'John',
