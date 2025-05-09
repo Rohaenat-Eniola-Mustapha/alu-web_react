@@ -1,34 +1,45 @@
 // Teacher Interface
-
 export interface Teacher {
-    firstName: string;
-    lastName: string;
-    fullTimeEmployee: boolean;
-    yearsOfExperience?: number; // this means optional property
-    location: string;
-    [propName: string]: any;
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
 }
 
+// Directors Interface, extending Teacher
 export interface Directors extends Teacher {
-    numberOfReports: number;
+  numberOfReports: number;
 }
+
+// Interface for the printTeacher function
+export interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+// printTeacher Function Implementation
+export const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Example Usage (as in the task description)
+const teacher3: Teacher = {
+  firstName: 'John',
+  fullTimeEmployee: false,
+  lastName: 'Doe',
+  location: 'London',
+  contract: false,
+};
 
 const director1: Directors = {
-    firstName: 'John',
-    lastName: 'Doe',
-    location: 'London',
-    fullTimeEmployee: true,
-    numberOfReports: 17,
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
 };
+
+console.log(teacher3);
 console.log(director1);
-
-// // Example usage
-// const teacher3: Teacher = {
-//     firstName: 'John',
-//     fullTimeEmployee: false,
-//     lastName: 'Doe',
-//     location: 'London',
-//     contract: false,
-// };
-
-// console.log(teacher3);
+console.log(printTeacher("John", "Doe"));
