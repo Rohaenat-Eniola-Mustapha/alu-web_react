@@ -86,9 +86,6 @@ export function teachClass(todayClass: Subjects): string {
   } else if (todayClass === 'History') {
     return 'Teaching History';
   }
-  //  else { // Not strictly required, but good practice for exhaustive checks
-  //   return 'Teaching ' + todayClass; //Should not reach here
-  // }
 }
 
 // Example usage
