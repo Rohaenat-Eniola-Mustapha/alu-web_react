@@ -24,9 +24,14 @@
     "source-map": "^0.7.3",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.2.0",
-    "typescript": "^3.6.4",
+    "typescript": "^3.9.10",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.8.2"
+  },
+  "dependencies": {
+    "node": "^24.0.1",
+    "ts": "^0.2.2",
+    "tsc": "^2.0.4"
   }
 }
