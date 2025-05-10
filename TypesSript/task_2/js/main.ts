@@ -49,8 +49,7 @@ export function createEmployee(salary: number | string): DirectorInterface | Tea
   if (typeof salary === 'string') {
     salaryValue = parseInt(salary.replace(/[^0-9]/g, ''), 10);
     if (isNaN(salaryValue)) {
-      // Handle the case where the string is not a valid number
-      return new Teacher(); // Or throw an error, or handle as appropriate for your application
+      return new Teacher();
     }
   } else {
     salaryValue = salary;
@@ -77,10 +76,28 @@ export function executeWork(employee: DirectorInterface | TeacherInterface): voi
   }
 }
 
-// Example output
+// String literal type for Subjects
+type Subjects = 'Math' | 'History';
+
+// Function teachClass
+export function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+  //  else { // Not strictly required, but good practice for exhaustive checks
+  //   return 'Teaching ' + todayClass; //Should not reach here
+  // }
+}
+
+// Example usage
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
+
 console.log(createEmployee(200) instanceof Teacher);
 console.log(createEmployee(1000) instanceof Director);
 console.log(createEmployee('$500') instanceof Director);
 
-executeWork(createEmployee(200));  // Output: Getting to work
+executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
