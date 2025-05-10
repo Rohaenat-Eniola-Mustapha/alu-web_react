@@ -23,7 +23,34 @@ export const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-// Example Usage (as in the task description)
+// Interface for the StudentClass
+interface StudentClass {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+// StudentClass implementation
+class StudentClass implements StudentClass {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+// Example Usage
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
@@ -42,4 +69,8 @@ const director1: Directors = {
 
 console.log(teacher3);
 console.log(director1);
-console.log(printTeacher("John", "Doe"));
+console.log(printTeacher('John', 'Doe'));
+
+const student1 = new StudentClass('Alice', 'Smith');
+console.log(student1.displayName());
+console.log(student1.workOnHomework());
