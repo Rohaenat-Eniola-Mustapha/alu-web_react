@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.createEmployee = exports.Teacher = exports.Director = void 0;
+exports.executeWork = exports.isDirector = exports.createEmployee = exports.Teacher = exports.Director = void 0;
 // Class Director
 var Director = /** @class */ (function () {
     function Director() {
@@ -39,7 +39,8 @@ function createEmployee(salary) {
     if (typeof salary === 'string') {
         salaryValue = parseInt(salary.replace(/[^0-9]/g, ''), 10);
         if (isNaN(salaryValue)) {
-            return new Teacher();
+            // Handle the case where the string is not a valid number
+            return new Teacher(); // Or throw an error, or handle as appropriate for your application
         }
     }
     else {
@@ -51,8 +52,24 @@ function createEmployee(salary) {
     return new Director();
 }
 exports.createEmployee = createEmployee;
+// Function isDirector (type predicate)
+function isDirector(employee) {
+    return employee instanceof Director;
+}
+exports.isDirector = isDirector;
+// Function executeWork
+function executeWork(employee) {
+    if (isDirector(employee)) {
+        console.log(employee.workDirectorTasks());
+    }
+    else {
+        console.log(employee.workTeacherTasks());
+    }
+}
+exports.executeWork = executeWork;
 // Example output
 console.log(createEmployee(200) instanceof Teacher);
 console.log(createEmployee(1000) instanceof Director);
 console.log(createEmployee('$500') instanceof Director);
-console.log(createEmployee('abc'));
+executeWork(createEmployee(200)); // Output: Getting to work
+executeWork(createEmployee(1000));
