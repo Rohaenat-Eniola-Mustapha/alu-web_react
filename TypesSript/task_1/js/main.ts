@@ -23,16 +23,19 @@ export const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
+// Interface for the StudentClass Constructor
+export interface StudentConstructor {
+  new(firstName: string, lastName: string): StudentClassInterface;
+};
+
 // Interface for the StudentClass
-interface StudentClass {
-  firstName: string;
-  lastName: string;
-  workOnHomework(): string;
+export interface StudentClassInterface {
   displayName(): string;
+  workOnHomework(): string;
 }
 
 // StudentClass implementation
-class StudentClass implements StudentClass {
+class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
