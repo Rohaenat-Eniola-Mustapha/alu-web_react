@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "jsx": "react",
+    "outDir": "./dist",
+    "rootDirs": ["./"],
+    "lib": ["es6", "dom"]
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules"]
+}
