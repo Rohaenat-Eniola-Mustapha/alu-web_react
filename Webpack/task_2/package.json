@@ -6,12 +6,12 @@
     "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
+    "css-loader": "^6.10.0",
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.3.4",
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4",
-    "css-loader": "^6.10.0",
-    "style-loader": "^3.3.4",
-    "file-loader": "^6.2.0",
-    "url-loader": "^4.1.1"
+    "image-webpack-loader": "^9.1.0"
   },
   "dependencies": {
     "jquery": "^3.7.1",
