@@ -1,0 +1,20 @@
+Module build failed (from ./node_modules/url-loader/dist/cjs.js):
+Error: Cannot find module 'file-loader'
+Require stack:
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/url-loader/dist/index.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/url-loader/dist/cjs.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/loader-runner/lib/loadLoader.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/loader-runner/lib/LoaderRunner.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack/lib/NormalModuleFactory.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack/lib/Compiler.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack/lib/webpack.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack/lib/index.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack-cli/lib/webpack-cli.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack-cli/lib/bootstrap.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack-cli/bin/cli.js
+- /workspaces/alu-web_react/Webpack/task_3/node_modules/webpack/bin/webpack.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+    at Module._load (node:internal/modules/cjs/loader:1043:27)
+    at Module.require (node:internal/modules/cjs/loader:1298:19)
+    at require (node:internal/modules/helpers:182:18)
+    at Object.loader (/workspaces/alu-web_react/Webpack/task_3/node_modules/url-loader/dist/index.js:120:20)
