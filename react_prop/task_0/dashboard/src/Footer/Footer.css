@@ -1,0 +1,9 @@
+.App-footer {
+    background-color: #fff;
+    color: #222;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
+    padding: 20px;
+    border-top: 3px solid #e1345b;
+    margin-top: auto;
+}
