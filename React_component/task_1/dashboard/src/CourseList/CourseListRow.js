@@ -1,43 +1,44 @@
-import { checkPropTypes } from 'prop-types'
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './CourseList.css';
 
-const CourseListRow = ({isHeader, textFirstCell, textSecondCell}) => {
-    if (isHeader === true) {
-        if (textSecondCell === null || textSecondCell === undefined) {
-            return (
-                <tr>
-                    <th colSpan={2}>{ textFirstCell }</th>
-                </tr>
-            )
-        } else {
-            return (
-                <tr>
-                    <th>{ textFirstCell }</th>
-                    <th>{ textSecondCell }</th>
-                </tr>
-            )
-        }
-    } 
-    else {
-        return (
-        <tr>
-            <th>{ textFirstCell }</th>
-            <th>{ textSecondCell }</th>
-        </tr>
-        )
-    }
+function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
+    return (
+        <>
+            <tr>
+                { isHeader && !textSecondCell && (
+                    <th colSpan={ 2 }>{ textFirstCell }</th>
+                ) }
+                { isHeader && textSecondCell && (
+                    <>
+                        <th>{ textFirstCell }</th>
+                        <th>{ textSecondCell }</th>
+                    </>
+                ) }
+                { !isHeader && (
+                    <>
+                        <td>{ textFirstCell }</td>
+                        <td>{ textSecondCell }</td>
+                    </>
+                ) }
+            </tr>
+        </>
+    );
 }
 
-CourseListRow.prototype = {
-    isHeader: checkPropTypes.bool,
+CourseListRow.propTypes = {
+    isHeader: PropTypes.bool,
     textFirstCell: PropTypes.string.isRequired,
-    textSecondCell: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    textSecondCell: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
 };
 
 CourseListRow.defaultProps = {
     isHeader: false,
+    textFirstCell: "Holberton",
     textSecondCell: null,
-}
+};
 
-export default CourseListRow
+export default CourseListRow;

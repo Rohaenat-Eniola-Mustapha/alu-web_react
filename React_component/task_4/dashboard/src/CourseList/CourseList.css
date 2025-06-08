@@ -1,9 +1,14 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+#CourseList {
+    width: 90vw;
+    margin: 0 5vw;
+    border: 1px solid grey;
 }
 
-table, th {
-    border: 1px solid lightgray;
+tr th {
+    border-bottom: 1px solid grey;
+}
+
+tbody,
+thead tr:nth-child(2) {
+    text-align: left;
 }
